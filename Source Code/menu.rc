@@ -1,0 +1,46 @@
+/*-----------------------------------------------------------------------------------
+--	SOURCE FILE:	menu.rc - Menu resource file that defines the program menu.
+--
+--	PROGRAM:        Terminal Emulator
+--
+--	DATE:			October 3, 2015
+--
+--	REVISIONS:		N/A
+--
+--	DESIGNER:		Alvin Man
+--
+--	PROGRAMMER:		Alvin Man
+--
+--	NOTES:			menu.rc is part of a minimal Windows terminal emulator,
+--					that transmits characters typed on the keyboard to the serial
+--					port and displays all characters received via the serial port.
+--
+--					This program uses asynchronous I/O to handle the read/write on
+--					the serial port.
+--
+--					This program utilizes the layered (OSI) approach.
+-----------------------------------------------------------------------------------*/
+
+#include "header.h"
+
+MYMENU MENU
+{
+	POPUP "&File"
+	{
+		MENUITEM "&Connect", IDM_Connect
+		MENUITEM "&Disconnect", IDM_Disconnect
+		MENUITEM "&Exit", IDM_Exit
+	}
+
+	POPUP "&Port"
+	{
+		MENUITEM "&COM1", IDM_COM1
+		MENUITEM "&COM2", IDM_COM2
+		MENUITEM "&COM3", IDM_COM3
+		MENUITEM "&COM4", IDM_COM4
+		MENUITEM "&COM5", IDM_COM5
+	}
+
+	MENUITEM "&Communication Parameters", IDM_ConnParams
+	MENUITEM "&Help", IDM_HELP
+}
